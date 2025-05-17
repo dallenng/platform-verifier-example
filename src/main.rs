@@ -12,7 +12,7 @@ use rustls::{ClientConfig, ClientConnection, ServerConfig, ServerConnection};
 use rustls_platform_verifier::Verifier;
 
 fn main() -> anyhow::Result<()> {
-    env_logger::Builder::from_env(Env::default().default_filter_or("debug")).init();
+    env_logger::Builder::from_env(Env::default().default_filter_or("trace")).init();
 
     let pki = Pki::new()?;
 
